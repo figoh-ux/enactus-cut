@@ -16,9 +16,16 @@ export default function Home() {
 
       <nav className="navbar">
         <div className="nav-container">
-          <a href="/" className="logo">
-            <img src="/enactus-logo.png.png" alt="Enactus CUT Logo" />
+          {/* CHINHOYI UNIVERSITY LOGO - LEFT */}
+
+          <a href="/" className="cut-logo">
+            <img
+              src="/cut-logo.png"
+              alt="Chinhoyi University of Technology Logo"
+            />
           </a>
+
+          {/* MOBILE MENU BUTTON */}
 
           <button
             className="menu-toggle"
@@ -30,26 +37,39 @@ export default function Home() {
             {menuOpen ? "✕" : "☰"}
           </button>
 
+          {/* NAVIGATION LINKS - CENTRE */}
+
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-            <a href="#home" onClick={() => setMenuOpen(false)}>
+            <a href="/" onClick={() => setMenuOpen(false)}>
               Home
             </a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>
+
+            <a href="/about" onClick={() => setMenuOpen(false)}>
               About
             </a>
-            <a href="#focus" onClick={() => setMenuOpen(false)}>
+
+            <a href="/#focus" onClick={() => setMenuOpen(false)}>
               Our Focus
             </a>
-            <a href="#projects" onClick={() => setMenuOpen(false)}>
+
+            <a href="/#projects" onClick={() => setMenuOpen(false)}>
               Projects
             </a>
-            <a href="#join" onClick={() => setMenuOpen(false)}>
+
+            <a href="/#join" onClick={() => setMenuOpen(false)}>
               Our Team
             </a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>
+
+            <a href="/#contact" onClick={() => setMenuOpen(false)}>
               Contact
             </a>
           </div>
+
+          {/* ENACTUS LOGO - RIGHT */}
+
+          <a href="/" className="enactus-logo">
+            <img src="/enactus-logo.png" alt="Enactus Logo" />
+          </a>
         </div>
       </nav>
 
@@ -137,7 +157,7 @@ export default function Home() {
             development.
           </p>
 
-          <a href="#focus" className="text-link">
+          <a href="/about" className="text-link">
             Discover More →
           </a>
         </div>
@@ -258,23 +278,28 @@ export default function Home() {
           <div className="footer-links">
             <h3>Quick Links</h3>
 
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#projects">Our Projects</a>
-            <a href="#focus">Our Focus</a>
+            <a href="/">Home</a>
+
+            <a href="/about">About Us</a>
+
+            <a href="/#projects">Our Projects</a>
+
+            <a href="/#focus">Our Focus</a>
           </div>
 
           <div className="footer-links">
             <h3>Get Involved</h3>
 
-            <a href="#join">Join Enactus</a>
-            <a href="#contact">Contact Us</a>
+            <a href="/#join">Join Enactus</a>
+
+            <a href="/#contact">Contact Us</a>
           </div>
 
           <div className="footer-links">
             <h3>Find Us</h3>
 
             <p>Chinhoyi University of Technology</p>
+
             <p>Chinhoyi, Zimbabwe</p>
           </div>
         </div>

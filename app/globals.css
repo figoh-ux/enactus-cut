@@ -624,3 +624,619 @@ footer {
     gap: 35px;
   }
 }
+
+/* ==========================================
+   ENACTUS CUT - ABOUT PAGE
+========================================== */
+
+.about-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #26364b;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page p {
+  margin-top: 0;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.about-hero {
+  min-height: 530px;
+  display: flex;
+  align-items: center;
+  padding: 90px 9%;
+  position: relative;
+  background: linear-gradient(115deg, #071d49 0%, #123f78 65%, #17609a 100%);
+  color: #ffffff;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border: 55px solid rgba(255, 255, 255, 0.045);
+  border-radius: 50%;
+  right: -100px;
+  bottom: -150px;
+  pointer-events: none;
+}
+
+.about-hero-content {
+  max-width: 760px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-tag {
+  display: inline-block;
+  color: #f28c00;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 17px;
+}
+
+.about-hero h1 {
+  font-size: clamp(42px, 5.2vw, 68px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -1.8px;
+  margin-bottom: 25px;
+}
+
+.about-hero h1 span {
+  display: block;
+  color: #ff9d1b;
+}
+
+.about-hero p {
+  max-width: 600px;
+  color: #e0e9f5;
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 0;
+}
+
+.about-button,
+.about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 29px;
+  margin-top: 30px;
+  background: #f28c00;
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.about-button:hover,
+.about-cta-button:hover {
+  background: #d97700;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(242, 140, 0, 0.25);
+}
+
+/* ==========================================
+   WHO WE ARE
+========================================== */
+
+.about-who {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+  padding: 105px 9%;
+}
+
+.about-image-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(16, 43, 80, 0.14);
+}
+
+.about-team-image {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.about-image-container:hover .about-team-image {
+  transform: scale(1.05);
+}
+
+.about-who-content h2 {
+  color: #102b50;
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.25;
+  margin-bottom: 23px;
+  letter-spacing: -0.7px;
+}
+
+.about-who-content p {
+  color: #64748b;
+  font-size: 15.5px;
+  line-height: 1.95;
+  margin-bottom: 17px;
+}
+
+/* ==========================================
+   SECTION HEADINGS
+========================================== */
+
+.about-section-heading {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+
+.about-section-heading h2 {
+  color: #102b50;
+  font-size: clamp(29px, 3.5vw, 39px);
+  line-height: 1.25;
+  margin-bottom: 15px;
+  letter-spacing: -0.7px;
+}
+
+.about-section-heading p {
+  color: #718096;
+  font-size: 15.5px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   TEAM GALLERY
+========================================== */
+
+.about-gallery {
+  padding: 100px 9%;
+  background: #f5f8fc;
+}
+
+.about-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 220px 220px;
+  gap: 17px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e4eaf2;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-large {
+  grid-row: span 2;
+}
+
+/* ==========================================
+   MISSION, VISION AND VALUES
+========================================== */
+
+.about-values {
+  padding: 100px 9%;
+  background: #ffffff;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.about-value-card {
+  padding: 38px 30px;
+  background: #ffffff;
+  border: 1px solid #e9eef5;
+  border-radius: 13px;
+  box-shadow: 0 8px 30px rgba(16, 43, 80, 0.055);
+  transition: all 0.3s ease;
+}
+
+.about-value-card:hover {
+  transform: translateY(-8px);
+  border-color: #f28c00;
+  box-shadow: 0 16px 35px rgba(16, 43, 80, 0.1);
+}
+
+.about-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3df;
+  border-radius: 12px;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.about-value-card h3 {
+  color: #102b50;
+  font-size: 21px;
+  margin-bottom: 14px;
+}
+
+.about-value-card p {
+  color: #718096;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   OUR APPROACH
+========================================== */
+
+.about-approach {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 100px 9%;
+  background: #f5f8fc;
+}
+
+.about-approach-content h2 {
+  color: #102b50;
+  font-size: clamp(30px, 3.3vw, 41px);
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.about-approach-content p {
+  color: #64748b;
+  font-size: 15.5px;
+  line-height: 1.95;
+  margin-bottom: 20px;
+}
+
+.about-text-link {
+  display: inline-block;
+  color: #e47f00;
+  font-weight: 800;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: color 0.3s ease;
+}
+
+.about-text-link:hover {
+  color: #102b50;
+}
+
+.about-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 11px;
+  border: 1px solid #edf1f6;
+  box-shadow: 0 6px 20px rgba(16, 43, 80, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.about-step:hover {
+  transform: translateX(6px);
+}
+
+.about-step > span {
+  flex-shrink: 0;
+  font-size: 27px;
+  font-weight: 800;
+  color: #f28c00;
+}
+
+.about-step h3 {
+  color: #102b50;
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+
+.about-step p {
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   CALL TO ACTION
+========================================== */
+
+.about-cta {
+  text-align: center;
+  padding: 90px 9%;
+  background: linear-gradient(115deg, #071d49, #123f78);
+  color: #ffffff;
+}
+
+.about-cta h2 {
+  font-size: clamp(30px, 3.5vw, 41px);
+  margin-bottom: 18px;
+}
+
+.about-cta p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #dce6f3;
+  font-size: 15.5px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 950px) {
+  .about-who,
+  .about-approach {
+    gap: 40px;
+    padding: 80px 6%;
+  }
+
+  .about-gallery,
+  .about-values {
+    padding: 80px 6%;
+  }
+
+  .about-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 210px);
+  }
+
+  .gallery-large {
+    grid-row: auto;
+  }
+
+  .about-values-grid {
+    gap: 16px;
+  }
+
+  .about-value-card {
+    padding: 28px 22px;
+  }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 650px) {
+  .about-hero {
+    min-height: 440px;
+    padding: 75px 7%;
+  }
+
+  .about-hero h1 {
+    font-size: 39px;
+    letter-spacing: -0.8px;
+  }
+
+  .about-hero p {
+    font-size: 15px;
+  }
+
+  .about-who,
+  .about-approach {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 65px 7%;
+  }
+
+  .about-team-image {
+    height: 290px;
+  }
+
+  .about-who-content h2,
+  .about-approach-content h2 {
+    font-size: 30px;
+  }
+
+  .about-gallery,
+  .about-values {
+    padding: 70px 7%;
+  }
+
+  .about-section-heading {
+    margin-bottom: 35px;
+  }
+
+  .about-section-heading h2 {
+    font-size: 29px;
+  }
+
+  .about-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 165px);
+    gap: 10px;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-value-card {
+    padding: 30px 25px;
+  }
+
+  .about-step {
+    padding: 21px;
+    gap: 15px;
+  }
+
+  .about-cta {
+    padding: 70px 7%;
+  }
+
+  .about-cta h2 {
+    font-size: 30px;
+  }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 380px) {
+  .about-hero h1 {
+    font-size: 33px;
+  }
+
+  .about-gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 210px);
+  }
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* CUT LOGO - LEFT */
+
+.cut-logo img {
+  width: 75px;
+  height: 65px;
+  object-fit: contain;
+  display: block;
+}
+
+/* NAVIGATION LINKS - CENTRE */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #183153;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f28c00;
+}
+
+/* ENACTUS LOGO - RIGHT */
+
+.enactus-logo img {
+  width: 115px;
+  height: 65px;
+  object-fit: contain;
+  display: block;
+}
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #183153;
+}
+
+/* RESPONSIVE NAVIGATION */
+
+@media (max-width: 900px) {
+  .nav-container {
+    padding: 10px 4%;
+    gap: 12px;
+  }
+
+  .cut-logo img {
+    width: 60px;
+    height: 55px;
+  }
+
+  .enactus-logo img {
+    width: 95px;
+    height: 55px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    order: 3;
+  }
+
+  .enactus-logo {
+    order: 2;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 25px 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}

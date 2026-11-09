@@ -1,0 +1,368 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+export default function AboutPage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <main className="about-page">
+      {/* =========================
+          NAVIGATION
+      ========================= */}
+
+      <nav className="navbar">
+        <div className="nav-container">
+          {/* CUT LOGO - LEFT */}
+
+          <a href="/" className="cut-logo">
+            <img
+              src="/cut-logo.png"
+              alt="Chinhoyi University of Technology Logo"
+            />
+          </a>
+
+          {/* MOBILE MENU BUTTON */}
+
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+            type="button"
+          >
+            {menuOpen ? "✕" : "☰"}
+          </button>
+
+          {/* NAVIGATION LINKS - CENTRE */}
+
+          <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+            <a href="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
+
+            <a href="/about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+
+            <a href="/#focus" onClick={() => setMenuOpen(false)}>
+              Our Focus
+            </a>
+
+            <a href="/#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+
+            <a href="/#join" onClick={() => setMenuOpen(false)}>
+              Our Team
+            </a>
+
+            <a href="/#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+          </div>
+
+          {/* ENACTUS LOGO - RIGHT */}
+
+          <a href="/" className="enactus-logo">
+            <img src="/enactus-logo.png" alt="Enactus Logo" />
+          </a>
+        </div>
+      </nav>
+
+      {/* =========================
+          HERO SECTION
+      ========================= */}
+
+      <section className="about-hero">
+        <div className="about-hero-content">
+          <span className="about-tag">ABOUT ENACTUS CUT</span>
+
+          <h1>
+            Creating a Better Future
+            <span> Through Entrepreneurship.</span>
+          </h1>
+
+          <p>
+            We are a community of students committed to using entrepreneurial
+            action to create positive change in our communities.
+          </p>
+
+          <Link href="/#projects" className="about-button">
+            Explore Our Projects
+          </Link>
+        </div>
+      </section>
+
+      {/* =========================
+          WHO WE ARE
+      ========================= */}
+
+      <section className="about-who">
+        <div className="about-image-container">
+          <Image
+            src="/enactus-team.jpg.jpeg"
+            alt="Enactus CUT team"
+            width={650}
+            height={450}
+            className="about-team-image"
+          />
+        </div>
+
+        <div className="about-who-content">
+          <span className="about-tag">WHO WE ARE</span>
+
+          <h2>Students. Innovators. Changemakers.</h2>
+
+          <p>
+            Enactus CUT Zimbabwe brings together students who believe that
+            business and entrepreneurship can be powerful tools for addressing
+            social, economic and environmental challenges.
+          </p>
+
+          <p>
+            Through teamwork, innovation and practical projects, we aim to
+            develop solutions that improve lives and contribute to sustainable
+            community development.
+          </p>
+        </div>
+      </section>
+
+      {/* =========================
+          TEAM GALLERY
+      ========================= */}
+
+      <section className="about-gallery">
+        <div className="about-section-heading">
+          <span className="about-tag">OUR COMMUNITY</span>
+
+          <h2>Life at Enactus CUT</h2>
+
+          <p>
+            A glimpse into our teamwork, activities, experiences and commitment
+            to creating meaningful change.
+          </p>
+        </div>
+
+        <div className="about-gallery-grid">
+          <div className="gallery-item gallery-large">
+            <Image
+              src="/enactus-team.jpg.jpeg"
+              alt="Enactus CUT team"
+              width={700}
+              height={500}
+            />
+          </div>
+
+          <div className="gallery-item">
+            <Image
+              src="/team-1.jpg"
+              alt="Enactus CUT team members"
+              width={450}
+              height={300}
+            />
+          </div>
+
+          <div className="gallery-item">
+            <Image
+              src="/team-2.jpg"
+              alt="Enactus CUT team activities"
+              width={450}
+              height={300}
+            />
+          </div>
+
+          <div className="gallery-item">
+            <Image
+              src="/team-3.jpg"
+              alt="Enactus CUT members working together"
+              width={450}
+              height={300}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* =========================
+          MISSION, VISION AND VALUES
+      ========================= */}
+
+      <section className="about-values">
+        <div className="about-section-heading">
+          <span className="about-tag">OUR PURPOSE</span>
+
+          <h2>What Drives Us</h2>
+
+          <p>Our commitment to creating meaningful and lasting impact.</p>
+        </div>
+
+        <div className="about-values-grid">
+          <div className="about-value-card">
+            <div className="about-icon">🎯</div>
+
+            <h3>Our Mission</h3>
+
+            <p>
+              To empower students to use entrepreneurial thinking and action to
+              address real-world challenges and create positive change.
+            </p>
+          </div>
+
+          <div className="about-value-card">
+            <div className="about-icon">🌍</div>
+
+            <h3>Our Vision</h3>
+
+            <p>
+              To contribute towards a world where innovation, responsible
+              entrepreneurship and collaboration create sustainable
+              opportunities for everyone.
+            </p>
+          </div>
+
+          <div className="about-value-card">
+            <div className="about-icon">🤝</div>
+
+            <h3>Our Values</h3>
+
+            <p>
+              We value teamwork, integrity, innovation, leadership,
+              responsibility and community impact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================
+          OUR APPROACH
+      ========================= */}
+
+      <section className="about-approach">
+        <div className="about-approach-content">
+          <span className="about-tag">OUR APPROACH</span>
+
+          <h2>Turning Ideas Into Action</h2>
+
+          <p>
+            We believe that meaningful change begins with understanding the
+            challenges facing our communities. We bring people together, develop
+            innovative ideas and turn those ideas into practical projects.
+          </p>
+
+          <Link href="/#projects" className="about-text-link">
+            Discover what we do →
+          </Link>
+        </div>
+
+        <div className="about-steps">
+          <div className="about-step">
+            <span>01</span>
+
+            <div>
+              <h3>Identify Challenges</h3>
+              <p>Understand the problems affecting our communities.</p>
+            </div>
+          </div>
+
+          <div className="about-step">
+            <span>02</span>
+
+            <div>
+              <h3>Develop Solutions</h3>
+              <p>Use creativity and entrepreneurial thinking.</p>
+            </div>
+          </div>
+
+          <div className="about-step">
+            <span>03</span>
+
+            <div>
+              <h3>Create Impact</h3>
+              <p>Put ideas into action and work towards lasting change.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================
+          CALL TO ACTION
+      ========================= */}
+
+      <section className="about-cta">
+        <h2>Be Part of the Change.</h2>
+
+        <p>
+          Join us as we work towards building innovative solutions for a better
+          future.
+        </p>
+
+        <Link href="/#contact" className="about-cta-button">
+          Get Involved
+        </Link>
+      </section>
+
+      {/* =========================
+          FOOTER
+      ========================= */}
+
+      <footer id="contact">
+        <div className="footer-container">
+          {/* ENACTUS FOOTER LOGO */}
+
+          <div className="footer-about">
+            <img src="/enactus-logo.png" alt="Enactus CUT Logo" />
+
+            <p>
+              Empowering students to create positive change through
+              entrepreneurial action.
+            </p>
+          </div>
+
+          {/* QUICK LINKS */}
+
+          <div className="footer-links">
+            <h3>Quick Links</h3>
+
+            <a href="/">Home</a>
+
+            <a href="/about">About Us</a>
+
+            <a href="/#projects">Our Projects</a>
+
+            <a href="/#focus">Our Focus</a>
+          </div>
+
+          {/* GET INVOLVED */}
+
+          <div className="footer-links">
+            <h3>Get Involved</h3>
+
+            <a href="/#join">Join Enactus</a>
+
+            <a href="/#contact">Contact Us</a>
+          </div>
+
+          {/* LOCATION */}
+
+          <div className="footer-links">
+            <h3>Find Us</h3>
+
+            <p>Chinhoyi University of Technology</p>
+
+            <p>Chinhoyi, Zimbabwe</p>
+          </div>
+        </div>
+
+        {/* COPYRIGHT AND DEVELOPER CREDIT */}
+
+        <div className="footer-bottom">
+          <p>© 2026 Enactus CUT Zimbabwe. All Rights Reserved.</p>
+
+          <p>Powered by Figoh Technologies.</p>
+        </div>
+      </footer>
+    </main>
+  );
+}
