@@ -16,7 +16,7 @@ export default function Home() {
 
       <nav className="navbar">
         <div className="nav-container">
-          {/* CHINHOYI UNIVERSITY LOGO - LEFT */}
+          {/* CUT LOGO - LEFT */}
 
           <a href="/" className="cut-logo">
             <img
@@ -37,7 +37,7 @@ export default function Home() {
             {menuOpen ? "✕" : "☰"}
           </button>
 
-          {/* NAVIGATION LINKS - CENTRE */}
+          {/* NAVIGATION LINKS */}
 
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
             <a href="/" onClick={() => setMenuOpen(false)}>
@@ -52,7 +52,7 @@ export default function Home() {
               Our Focus
             </a>
 
-            <a href="/#projects" onClick={() => setMenuOpen(false)}>
+            <a href="/projects" onClick={() => setMenuOpen(false)}>
               Projects
             </a>
 
@@ -93,11 +93,11 @@ export default function Home() {
           </p>
 
           <div className="hero-buttons">
-            <a href="#projects" className="primary-button">
+            <a href="/projects" className="primary-button">
               Explore Our Projects →
             </a>
 
-            <a href="#about" className="secondary-button">
+            <a href="/about" className="secondary-button">
               Discover Enactus
             </a>
           </div>
@@ -213,7 +213,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS */}
+      {/* PROJECTS PREVIEW */}
 
       <section className="projects section" id="projects">
         <div className="section-heading">
@@ -226,7 +226,7 @@ export default function Home() {
 
         <div className="project-grid">
           <div className="project-card">
-            {/* Actual Enactus CUT project photograph */}
+            {/* Authentic Enactus CUT project photograph */}
 
             <img src="/project-1.jpg.jpeg" alt="Enactus CUT project" />
 
@@ -237,9 +237,17 @@ export default function Home() {
 
               <p>Showcasing student-led solutions to community challenges.</p>
 
-              <a href="#contact">Learn More →</a>
+              <a href="/projects">Explore Projects →</a>
             </div>
           </div>
+        </div>
+
+        {/* VIEW ALL PROJECTS BUTTON */}
+
+        <div className="projects-view-all">
+          <a href="/projects" className="primary-button">
+            View All Projects →
+          </a>
         </div>
       </section>
 
@@ -267,7 +275,7 @@ export default function Home() {
       <footer id="contact">
         <div className="footer-container">
           <div className="footer-about">
-            <img src="/enactus-logo.png.png" alt="Enactus CUT Logo" />
+            <img src="/enactus-logo.png" alt="Enactus CUT Logo" />
 
             <p>
               Empowering students to create positive change through
@@ -282,7 +290,7 @@ export default function Home() {
 
             <a href="/about">About Us</a>
 
-            <a href="/#projects">Our Projects</a>
+            <a href="/projects">Our Projects</a>
 
             <a href="/#focus">Our Focus</a>
           </div>

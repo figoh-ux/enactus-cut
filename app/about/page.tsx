@@ -9,22 +9,16 @@ export default function AboutPage() {
 
   return (
     <main className="about-page">
-      {/* =========================
-          NAVIGATION
-      ========================= */}
+      {/* NAVIGATION */}
 
       <nav className="navbar">
         <div className="nav-container">
-          {/* CUT LOGO - LEFT */}
-
           <a href="/" className="cut-logo">
             <img
               src="/cut-logo.png"
               alt="Chinhoyi University of Technology Logo"
             />
           </a>
-
-          {/* MOBILE MENU BUTTON */}
 
           <button
             className="menu-toggle"
@@ -36,35 +30,31 @@ export default function AboutPage() {
             {menuOpen ? "✕" : "☰"}
           </button>
 
-          {/* NAVIGATION LINKS - CENTRE */}
-
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-            <a href="/" onClick={() => setMenuOpen(false)}>
+            <Link href="/" onClick={() => setMenuOpen(false)}>
               Home
-            </a>
+            </Link>
 
-            <a href="/about" onClick={() => setMenuOpen(false)}>
+            <Link href="/about" onClick={() => setMenuOpen(false)}>
               About
-            </a>
+            </Link>
 
-            <a href="/#focus" onClick={() => setMenuOpen(false)}>
+            <Link href="/#focus" onClick={() => setMenuOpen(false)}>
               Our Focus
-            </a>
+            </Link>
 
-            <a href="/#projects" onClick={() => setMenuOpen(false)}>
+            <Link href="/projects" onClick={() => setMenuOpen(false)}>
               Projects
-            </a>
+            </Link>
 
-            <a href="/#join" onClick={() => setMenuOpen(false)}>
+            <Link href="/#join" onClick={() => setMenuOpen(false)}>
               Our Team
-            </a>
+            </Link>
 
-            <a href="/#contact" onClick={() => setMenuOpen(false)}>
+            <Link href="/#contact" onClick={() => setMenuOpen(false)}>
               Contact
-            </a>
+            </Link>
           </div>
-
-          {/* ENACTUS LOGO - RIGHT */}
 
           <a href="/" className="enactus-logo">
             <img src="/enactus-logo.png" alt="Enactus Logo" />
@@ -72,9 +62,7 @@ export default function AboutPage() {
         </div>
       </nav>
 
-      {/* =========================
-          HERO SECTION
-      ========================= */}
+      {/* HERO SECTION */}
 
       <section className="about-hero">
         <div className="about-hero-content">
@@ -90,15 +78,13 @@ export default function AboutPage() {
             action to create positive change in our communities.
           </p>
 
-          <Link href="/#projects" className="about-button">
-            Explore Our Projects
+          <Link href="/projects" className="about-button">
+            Explore Our Projects →
           </Link>
         </div>
       </section>
 
-      {/* =========================
-          WHO WE ARE
-      ========================= */}
+      {/* WHO WE ARE */}
 
       <section className="about-who">
         <div className="about-image-container">
@@ -130,9 +116,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* =========================
-          TEAM GALLERY
-      ========================= */}
+      {/* TEAM GALLERY */}
 
       <section className="about-gallery">
         <div className="about-section-heading">
@@ -185,9 +169,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* =========================
-          MISSION, VISION AND VALUES
-      ========================= */}
+      {/* MISSION, VISION AND VALUES */}
 
       <section className="about-values">
         <div className="about-section-heading">
@@ -235,9 +217,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* =========================
-          OUR APPROACH
-      ========================= */}
+      {/* OUR APPROACH */}
 
       <section className="about-approach">
         <div className="about-approach-content">
@@ -251,7 +231,7 @@ export default function AboutPage() {
             innovative ideas and turn those ideas into practical projects.
           </p>
 
-          <Link href="/#projects" className="about-text-link">
+          <Link href="/projects" className="about-text-link">
             Discover what we do →
           </Link>
         </div>
@@ -286,9 +266,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* =========================
-          CALL TO ACTION
-      ========================= */}
+      {/* CALL TO ACTION */}
 
       <section className="about-cta">
         <h2>Be Part of the Change.</h2>
@@ -303,14 +281,10 @@ export default function AboutPage() {
         </Link>
       </section>
 
-      {/* =========================
-          FOOTER
-      ========================= */}
+      {/* FOOTER */}
 
       <footer id="contact">
         <div className="footer-container">
-          {/* ENACTUS FOOTER LOGO */}
-
           <div className="footer-about">
             <img src="/enactus-logo.png" alt="Enactus CUT Logo" />
 
@@ -320,31 +294,25 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* QUICK LINKS */}
-
           <div className="footer-links">
             <h3>Quick Links</h3>
 
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
 
-            <a href="/about">About Us</a>
+            <Link href="/about">About Us</Link>
 
-            <a href="/#projects">Our Projects</a>
+            <Link href="/projects">Our Projects</Link>
 
-            <a href="/#focus">Our Focus</a>
+            <Link href="/#focus">Our Focus</Link>
           </div>
-
-          {/* GET INVOLVED */}
 
           <div className="footer-links">
             <h3>Get Involved</h3>
 
-            <a href="/#join">Join Enactus</a>
+            <Link href="/#join">Join Enactus</Link>
 
-            <a href="/#contact">Contact Us</a>
+            <Link href="/#contact">Contact Us</Link>
           </div>
-
-          {/* LOCATION */}
 
           <div className="footer-links">
             <h3>Find Us</h3>
@@ -354,8 +322,6 @@ export default function AboutPage() {
             <p>Chinhoyi, Zimbabwe</p>
           </div>
         </div>
-
-        {/* COPYRIGHT AND DEVELOPER CREDIT */}
 
         <div className="footer-bottom">
           <p>© 2026 Enactus CUT Zimbabwe. All Rights Reserved.</p>
