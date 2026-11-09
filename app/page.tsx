@@ -1,8 +1,39 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-export default function Home() {
+function SocialIcons() {
+  return (
+    <div className="footer-social-icons">
+      <a
+        href="https://www.tiktok.com/@enactus_cut.zw"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Follow Enactus CUT on TikTok"
+        title="TikTok"
+      >
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.4v13.67a2.89 2.89 0 0 1-2.89 2.74 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.3 0 .59.05.87.14V9.3a6.33 6.33 0 0 0-.87-.06A6.29 6.29 0 1 0 15.82 15V8.01a8.16 8.16 0 0 0 4.77 1.54V6.14a4.85 4.85 0 0 1-1-.1Z" />
+        </svg>
+      </a>
+
+      <a
+        href="https://www.instagram.com/enactus_cut.zw/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Follow Enactus CUT on Instagram"
+        title="Instagram"
+      >
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm4.25 2.9a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6Zm0 1.8a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.5-2.7a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+        </svg>
+      </a>
+    </div>
+  );
+}
+
+export default function ContactPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [year, setYear] = useState("2026");
 
@@ -11,22 +42,23 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="contact-page">
       {/* NAVIGATION */}
-
       <nav className="navbar">
         <div className="nav-container">
           {/* CUT LOGO - LEFT */}
-
-          <a href="/" className="cut-logo">
+          <Link
+            href="/"
+            className="cut-logo"
+            onClick={() => setMenuOpen(false)}
+          >
             <img
               src="/cut-logo.png"
               alt="Chinhoyi University of Technology Logo"
             />
-          </a>
+          </Link>
 
           {/* MOBILE MENU BUTTON */}
-
           <button
             className="menu-toggle"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -38,335 +70,329 @@ export default function Home() {
           </button>
 
           {/* NAVIGATION LINKS */}
-
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-            <a href="/" onClick={() => setMenuOpen(false)}>
+            <Link href="/" onClick={() => setMenuOpen(false)}>
               Home
-            </a>
+            </Link>
 
-            <a href="/about" onClick={() => setMenuOpen(false)}>
+            <Link href="/about" onClick={() => setMenuOpen(false)}>
               About
-            </a>
+            </Link>
 
-            <a href="/#focus" onClick={() => setMenuOpen(false)}>
+            <Link href="/#focus" onClick={() => setMenuOpen(false)}>
               Our Focus
-            </a>
+            </Link>
 
-            <a href="/projects" onClick={() => setMenuOpen(false)}>
+            <Link href="/projects" onClick={() => setMenuOpen(false)}>
               Projects
-            </a>
+            </Link>
 
-            <a href="/#join" onClick={() => setMenuOpen(false)}>
+            <Link href="/#join" onClick={() => setMenuOpen(false)}>
               Our Team
-            </a>
+            </Link>
 
-            <a href="/#contact" onClick={() => setMenuOpen(false)}>
+            <Link
+              href="/contact"
+              className="active"
+              onClick={() => setMenuOpen(false)}
+            >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* ENACTUS LOGO - RIGHT */}
-
-          <a href="/" className="enactus-logo">
+          <Link
+            href="/"
+            className="enactus-logo"
+            onClick={() => setMenuOpen(false)}
+          >
             <img src="/enactus-logo.png" alt="Enactus Logo" />
-          </a>
+          </Link>
         </div>
       </nav>
 
-      {/* HERO SECTION */}
+      {/* HERO */}
+      <section className="contact-hero">
+        <div className="contact-hero-overlay"></div>
 
-      <section className="hero" id="home">
-        <div className="hero-content">
-          <span className="hero-tag">
-            ENACTUS CHINHOYI UNIVERSITY OF TECHNOLOGY
-          </span>
+        <div className="contact-hero-content">
+          <span className="contact-tag">LET'S CONNECT</span>
 
           <h1>
-            Empowering People.
-            <span> Transforming Communities.</span>
+            Let's Create
+            <span> Impact Together.</span>
           </h1>
 
           <p>
-            We are a community of student leaders using entrepreneurship,
-            innovation and action to create positive and sustainable change in
-            our communities.
+            Every great idea begins with a conversation. Whether you are a
+            student, organisation, business or potential partner, we would love
+            to hear from you.
           </p>
 
-          <div className="hero-buttons">
-            <a href="/projects" className="primary-button">
-              Explore Our Projects →
+          <div className="contact-hero-actions">
+            <a href="#contact-details" className="contact-hero-button">
+              Get In Touch
             </a>
 
-            <a href="/about" className="secondary-button">
-              Discover Enactus
+            <a href="#get-involved" className="contact-secondary-button">
+              Explore Opportunities
             </a>
           </div>
         </div>
 
-        <div className="hero-image">
-          {/* Authentic Enactus CUT team photograph */}
-
-          <img
-            src="/enactus-team.jpg.jpeg"
-            alt="Enactus CUT students working together"
-          />
+        <div className="contact-hero-bottom">
+          <span>ENTREPRENEURSHIP</span>
+          <span>INNOVATION</span>
+          <span>POSITIVE IMPACT</span>
         </div>
       </section>
 
-      {/* IMPACT SECTION */}
-
-      <section className="impact">
-        <div className="impact-heading">
-          <span>OUR IMPACT</span>
-
-          <h2>Creating Change That Matters</h2>
-
-          <p>
-            Our work is driven by innovation, entrepreneurship and a commitment
-            to improving lives.
-          </p>
-        </div>
-      </section>
-
-      {/* ABOUT SECTION */}
-
-      <section className="about section" id="about">
-        <div className="about-image">
-          {/* Authentic Enactus CUT project photograph */}
-
-          <img src="/project-1.jpg.jpeg" alt="Enactus CUT project" />
-        </div>
-
-        <div className="about-content">
-          <span className="section-label">WHO WE ARE</span>
+      {/* INTRODUCTION */}
+      <section className="contact-intro">
+        <div className="contact-intro-content">
+          <span className="contact-section-tag">CONNECT WITH US</span>
 
           <h2>
-            Students Today.
-            <span> Leaders Tomorrow.</span>
+            Great Things Happen
+            <span> When We Connect.</span>
           </h2>
 
           <p>
-            Enactus CUT is a student-led organisation at Chinhoyi University of
-            Technology that brings together students who believe in the power of
-            entrepreneurial action.
+            Enactus CUT welcomes connections with students, businesses,
+            organisations, community members and potential partners. Whether you
+            want to join our team, support a project or explore a partnership,
+            we are ready to connect.
           </p>
-
-          <p>
-            Through innovative ideas and practical projects, we aim to address
-            real-world challenges and contribute towards sustainable community
-            development.
-          </p>
-
-          <a href="/about" className="text-link">
-            Discover More →
-          </a>
         </div>
       </section>
 
-      {/* FOCUS AREAS */}
-
-      <section className="focus section" id="focus">
-        <div className="section-heading">
-          <span className="section-label">WHAT DRIVES US</span>
-
-          <h2>Our Areas of Focus</h2>
-
-          <p>
-            We believe entrepreneurship can be a powerful tool for creating
-            meaningful change.
-          </p>
+      {/* CONTACT DETAILS */}
+      <section className="contact-details" id="contact-details">
+        <div className="contact-heading">
+          <span className="contact-section-tag">REACH OUT TO US</span>
+          <h2>We Would Love to Hear From You</h2>
+          <p>Find out more about connecting with Enactus CUT.</p>
         </div>
 
-        <div className="focus-grid">
-          <div className="focus-card">
-            <div className="focus-icon">💡</div>
-
-            <h3>Innovation</h3>
-
-            <p>
-              Developing creative solutions to challenges affecting our
-              communities.
-            </p>
+        <div className="contact-info-grid">
+          <div className="contact-info-card">
+            <div className="contact-icon">📍</div>
+            <h3>Visit Our Campus</h3>
+            <p>Chinhoyi University of Technology</p>
+            <span>Chinhoyi, Zimbabwe</span>
           </div>
 
-          <div className="focus-card">
-            <div className="focus-icon">🚀</div>
-
-            <h3>Entrepreneurship</h3>
-
-            <p>
-              Promoting entrepreneurial thinking and sustainable business
-              opportunities.
-            </p>
+          <div className="contact-info-card">
+            <div className="contact-icon">✉️</div>
+            <h3>Email Enquiries</h3>
+            <p>Official club email</p>
+            <span>Contact details to be updated.</span>
           </div>
 
-          <div className="focus-card">
-            <div className="focus-icon">🌍</div>
-
-            <h3>Community Development</h3>
-
-            <p>
-              Working towards improving livelihoods and creating lasting social
-              impact.
-            </p>
+          <div className="contact-info-card">
+            <div className="contact-icon">📞</div>
+            <h3>Call Our Team</h3>
+            <p>Official club contact number</p>
+            <span>Contact details to be updated.</span>
           </div>
         </div>
       </section>
 
-      {/* PROJECTS PREVIEW */}
+      {/* GET INVOLVED */}
+      <section className="contact-involvement" id="get-involved">
+        <div className="involvement-content">
+          <span className="contact-section-tag">BE PART OF THE CHANGE</span>
 
-      <section className="projects section" id="projects">
-        <div className="section-heading">
-          <span className="section-label">OUR WORK</span>
+          <h2>Find Your Way to Make an Impact</h2>
 
-          <h2>Projects Making A Difference</h2>
+          <p>
+            Enactus is built on collaboration, innovation and entrepreneurship.
+            There are many ways to contribute to the work of Enactus CUT.
+          </p>
 
-          <p>Discover how our students turn ideas into meaningful action.</p>
-        </div>
+          <div className="involvement-grid">
+            <div className="involvement-card">
+              <span className="involvement-number">01</span>
+              <h3>Join Our Team</h3>
+              <p>
+                Are you a student interested in entrepreneurship, leadership and
+                creating positive change? Connect with us to learn about joining
+                Enactus CUT.
+              </p>
+            </div>
 
-        <div className="project-grid">
-          <div className="project-card">
-            {/* Authentic Enactus CUT project photograph */}
+            <div className="involvement-card">
+              <span className="involvement-number">02</span>
+              <h3>Volunteer With Us</h3>
+              <p>
+                Contribute your time, skills and ideas towards projects that aim
+                to improve communities.
+              </p>
+            </div>
 
-            <img src="/project-1.jpg.jpeg" alt="Enactus CUT project" />
+            <div className="involvement-card">
+              <span className="involvement-number">03</span>
+              <h3>Partner With Us</h3>
+              <p>
+                We welcome organisations and businesses interested in
+                collaborating on sustainable community initiatives.
+              </p>
+            </div>
 
-            <div className="project-info">
-              <span>OUR PROJECTS</span>
-
-              <h3>Community Innovation</h3>
-
-              <p>Showcasing student-led solutions to community challenges.</p>
-
-              <a href="/projects">Explore Projects →</a>
+            <div className="involvement-card">
+              <span className="involvement-number">04</span>
+              <h3>Support Our Projects</h3>
+              <p>
+                Help us create impact by contributing resources, knowledge,
+                expertise or other forms of support.
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* VIEW ALL PROJECTS BUTTON */}
+      {/* CONTACT FORM */}
+      <section className="contact-form-section">
+        <div className="contact-form-container">
+          <div className="contact-form-text">
+            <span className="contact-section-tag">START A CONVERSATION</span>
 
-        <div className="projects-view-all">
-          <a href="/projects" className="primary-button">
-            View All Projects →
-          </a>
+            <h2>
+              Have an Idea?
+              <span> Let's Talk.</span>
+            </h2>
+
+            <p>
+              Have a question, suggestion, partnership enquiry or opportunity
+              you would like to discuss? We welcome your message.
+            </p>
+
+            <div className="contact-form-note">
+              <strong>Let's work together.</strong>
+              <p>
+                We believe collaboration is an important part of creating
+                meaningful and sustainable impact.
+              </p>
+            </div>
+          </div>
+
+          <form
+            className="contact-form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert(
+                "Thank you for your interest in Enactus CUT. Our contact form is not connected yet. Please use the official club contact details once available.",
+              );
+            }}
+          >
+            <div className="form-group">
+              <label htmlFor="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What would you like to discuss?"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                placeholder="Write your message here..."
+                required
+              />
+            </div>
+
+            <button type="submit" className="contact-submit-button">
+              Send Message <span>→</span>
+            </button>
+
+            <small>
+              The messaging service will be activated once the club's official
+              contact system is connected.
+            </small>
+          </form>
         </div>
       </section>
 
-      {/* JOIN ENACTUS */}
+      {/* SOCIAL MEDIA */}
+      <section className="contact-social">
+        <span className="contact-section-tag">STAY CONNECTED</span>
+        <h2>Follow Our Journey</h2>
 
-      <section className="join" id="join">
-        <div>
-          <span>BE PART OF THE CHANGE</span>
+        <p>
+          Stay updated with our activities, events, initiatives and stories from
+          Enactus CUT.
+        </p>
 
-          <h2>
-            Your Ideas Can
-            <br />
-            Change Lives.
-          </h2>
+        <SocialIcons />
 
-          <p>
-            Join a community of students who are passionate about innovation,
-            entrepreneurship and making a difference.
-          </p>
-        </div>
+        <span className="footer-social-handle">@enactus_cut.zw</span>
       </section>
 
       {/* FOOTER */}
-
-      <footer id="contact">
+      <footer className="footer">
         <div className="footer-container">
-          <div className="footer-about">
-            <img src="/enactus-logo.png" alt="Enactus CUT Logo" />
-
+          <div className="footer-brand">
+            <img src="/enactus-logo.png" alt="Enactus Logo" />
             <p>
-              Empowering students to create positive change through
-              entrepreneurial action.
+              Empowering students to use entrepreneurship to create a better and
+              more sustainable world.
             </p>
           </div>
 
           <div className="footer-links">
             <h3>Quick Links</h3>
-
-            <a href="/">Home</a>
-
-            <a href="/about">About Us</a>
-
-            <a href="/projects">Our Projects</a>
-
-            <a href="/#focus">Our Focus</a>
+            <Link href="/">Home</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/projects">Our Projects</Link>
+            <Link href="/contact">Contact Us</Link>
           </div>
 
-          <div className="footer-links">
-            <h3>Get Involved</h3>
-
-            <a href="/#join">Join Enactus</a>
-
-            <a href="/contact">Contact Us</a>
-          </div>
-
-          <div className="footer-links">
+          <div className="footer-contact">
             <h3>Find Us</h3>
-
             <p>Chinhoyi University of Technology</p>
-
             <p>Chinhoyi, Zimbabwe</p>
           </div>
 
-          {/* SOCIAL MEDIA LINKS */}
-
           <div className="footer-social">
             <h3>Follow Our Journey</h3>
-
             <p>Connect with Enactus CUT on social media.</p>
 
-            <div className="footer-social-icons">
-              {/* TIKTOK */}
-
-              <a
-                href="https://www.tiktok.com/@enactus_cut.zw"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow Enactus CUT on TikTok"
-                title="TikTok"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="28"
-                  height="28"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.4v13.67a2.89 2.89 0 0 1-2.89 2.74 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.3 0 .59.05.87.14V9.3a6.33 6.33 0 0 0-.87-.06A6.29 6.29 0 1 0 15.82 15V8.01a8.16 8.16 0 0 0 4.77 1.54V6.14a4.85 4.85 0 0 1-1-.1Z" />
-                </svg>
-              </a>
-
-              {/* INSTAGRAM */}
-
-              <a
-                href="https://www.instagram.com/enactus_cut.zw/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow Enactus CUT on Instagram"
-                title="Instagram"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="28"
-                  height="28"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm4.25 2.9a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6Zm0 1.8a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.5-2.7a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
-                </svg>
-              </a>
-            </div>
+            <SocialIcons />
 
             <span className="footer-social-handle">@enactus_cut.zw</span>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© {year} Enactus CUT Zimbabwe. All Rights Reserved.</p>
-
+          <p>© {year} Enactus CUT. All rights reserved.</p>
           <p>Powered by Figoh Technologies.</p>
         </div>
       </footer>
